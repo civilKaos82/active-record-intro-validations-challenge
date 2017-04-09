@@ -1,4 +1,4 @@
-class Dog < ActiveRecord::Base
+class Dog < ApplicationRecord
   include USGeography
 
   belongs_to :owner, { class_name: "Person" }
