@@ -8,7 +8,7 @@ Database constraints are a necessary part of keeping our databases clean.  Howev
 How do Active Record validations help protect our database?  When we attempt to save a new record to the database, Active Record will validate the object before attempting to save it.  If everything checks out, Active Record will run the SQL `INSERT` query.  If there's a problem any our object (e.g., it's missing a required attribute), Active Record will not run the SQL query, and we'll never even attempt to write to the database.
 
 ```ruby
-class Dog < ActiveRecord::Base
+class Dog < ApplicationRecord
   include USGeography
 
   has_many :ratings
